@@ -1,6 +1,10 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const Discord = require("discord.js");
 
-const fs = require('fs');
+var bot = new Discord.Client();
 
-client.login("NzExMzIxMzYzMTcxOTAxNDgw.Xt-qPw.8c7PHwqBaKuR0f4eCde73-wYOMA");
+bot.on("ready", function() {
+  bot.user.setGame("ZioonBOT, Z!help);
+                   console.log("Le bot a bien ete connecte");
+});
+
+bot.login(process.env.TOKEN)
